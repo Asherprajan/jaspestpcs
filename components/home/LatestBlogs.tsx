@@ -3,33 +3,12 @@ import { ArrowRight, Calendar, User } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
+import { blogs as allBlogs } from '@/lib/blogs';
+import Image from 'next/image';
+
 export function LatestBlogs() {
-  const blogs = [
-    {
-      title: '5 Signs of Termite Infestation in Your Home',
-      excerpt: 'Termites can cause silent destruction. Learn how to identify the early warning signs of a termite infestation before it causes structural damage.',
-      date: 'May 15, 2026',
-      author: 'Pest Expert',
-      image: '/images/blog/termite-signs.jpg',
-      slug: 'signs-of-termite-infestation',
-    },
-    {
-      title: 'How to Keep Mosquitoes Away During Monsoon',
-      excerpt: 'Kerala monsoons bring a surge in mosquito populations. Discover effective preventive measures to protect your family from vector-borne diseases.',
-      date: 'June 02, 2026',
-      author: 'Health Advisor',
-      image: '/images/blog/mosquito-prevention.jpg',
-      slug: 'keep-mosquitoes-away-monsoon',
-    },
-    {
-      title: 'Why DIY Pest Control Often Fails',
-      excerpt: 'Store-bought sprays might offer temporary relief, but they rarely solve the root cause. Here is why professional pest control is a better investment.',
-      date: 'June 18, 2026',
-      author: 'JAS Team',
-      image: '/images/blog/diy-vs-pro.jpg',
-      slug: 'why-diy-pest-control-fails',
-    },
-  ];
+  const blogs = allBlogs.slice(0, 3);
+
 
   return (
     <section className="py-24 bg-slate-50">
@@ -47,10 +26,8 @@ export function LatestBlogs() {
             </p>
           </div>
           <div className="mt-6 md:mt-0">
-            <Link href="/blog">
-              <Button variant="outline" className="text-primary border-primary/20 hover:bg-primary hover:text-white rounded-full">
-                View All Posts
-              </Button>
+            <Link href="/blog" className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium transition-colors text-primary border border-primary/20 hover:bg-primary hover:text-white rounded-full">
+              View All Posts
             </Link>
           </div>
         </div>
@@ -59,9 +36,13 @@ export function LatestBlogs() {
           {blogs.map((blog, idx) => (
             <Card key={idx} className="border-none shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden bg-white flex flex-col h-full">
               <div className="relative h-56 bg-slate-200 overflow-hidden">
-                <div className="absolute inset-0 bg-slate-300 flex items-center justify-center text-slate-500 font-medium">
-                  [Image: {blog.title}]
-                </div>
+                <Image
+                  src={blog.image}
+                  alt={blog.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                />
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -70,7 +51,7 @@ export function LatestBlogs() {
                 <div className="flex items-center text-xs text-muted-foreground mb-4 space-x-4">
                   <div className="flex items-center">
                     <Calendar className="w-3.5 h-3.5 mr-1.5" />
-                    {blog.date}
+                    {new Date(blog.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
                   </div>
                   <div className="flex items-center">
                     <User className="w-3.5 h-3.5 mr-1.5" />

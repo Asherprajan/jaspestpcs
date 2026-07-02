@@ -1,6 +1,7 @@
 import { ShieldCheck, Target, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FinalCTA } from '@/components/home/FinalCTA';
 
 export const metadata = {
@@ -25,26 +26,19 @@ export default function AboutPage() {
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-[1200px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <h3 className="text-sm font-semibold tracking-wider text-secondary uppercase mb-2">
-                Our Story
-              </h3>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
-                Kerala's Most Trusted Pest Management Experts
-              </h2>
-              <p className="text-muted-foreground leading-relaxed text-lg">
-                JAS Pest Control Service is an ISO 9001:2015 certified company dedicated to providing safe, effective, and reliable pest management solutions across Kerala. With over two decades of experience, we have protected thousands of homes and businesses from destructive and disease-carrying pests.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Our team consists of highly trained and experienced professionals who use the latest technology and government-approved chemicals. We believe in a customer-centric approach, offering customized treatment plans, scheduled follow-ups, and guaranteed satisfaction.
-              </p>
-            </div>
-            <div className="relative h-[500px] rounded-2xl overflow-hidden bg-slate-100 shadow-xl border border-slate-200">
-              <div className="absolute inset-0 flex items-center justify-center text-slate-400 font-medium bg-slate-200">
-                [About Us Team Image Placeholder]
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h3 className="text-sm font-semibold tracking-wider text-secondary uppercase mb-2 inline-block">
+              Our Story
+            </h3>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-primary mb-6">
+              Kerala's Most Trusted Pest Management Experts
+            </h2>
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              JAS Pest Control Service is an ISO 9001:2015 certified company dedicated to providing safe, effective, and reliable pest management solutions across Kerala. With over two decades of experience, we have protected thousands of homes and businesses from destructive and disease-carrying pests.
+            </p>
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              Our team consists of highly trained and experienced professionals who use the latest technology and government-approved chemicals. We believe in a customer-centric approach, offering customized treatment plans, scheduled follow-ups, and guaranteed satisfaction.
+            </p>
           </div>
         </div>
       </section>

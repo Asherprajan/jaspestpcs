@@ -1,8 +1,8 @@
 'use client';
 
-import { ArrowRight, Bug, Shield, Activity, BedDouble, Target } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { ArrowRight } from 'lucide-react';
+import { services } from '@/lib/services';
+import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
   CarouselContent,
@@ -13,67 +13,34 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 
-const services = [
-  {
-    title: 'Cockroach Control',
-    description: 'Effective elimination of all cockroach species with advanced gel baiting and targeted spray treatments. Ensuring long-lasting protection.',
-    image: 'https://images.unsplash.com/photo-1584824486516-0555a07fc511?q=80&w=800&auto=format&fit=crop',
-    icon: Bug,
-    href: '/services/cockroach-control',
-  },
-  {
-    title: 'Termite Control',
-    description: 'Comprehensive anti-termite treatment for pre and post-construction. Protect your valuable property from silent destroyers.',
-    image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=800&auto=format&fit=crop',
-    icon: Shield,
-    href: '/services/termite-control',
-  },
-  {
-    title: 'Rodent Control',
-    description: 'Strategic placement of baits and traps to eradicate rats and mice, preventing disease spread and property damage.',
-    image: 'https://images.unsplash.com/photo-1590483736622-398541ce0519?q=80&w=800&auto=format&fit=crop',
-    icon: Activity,
-    href: '/services/rodent-control',
-  },
-  {
-    title: 'Bed Bug Treatment',
-    description: 'Thorough inspection and specialized chemical treatments to eliminate bed bugs at all life stages for a peaceful sleep.',
-    image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=800&auto=format&fit=crop',
-    icon: BedDouble,
-    href: '/services/bed-bug-treatment',
-  },
-  {
-    title: 'Ant Control',
-    description: 'Targeted solutions to get rid of black ants, red ants, and other invasive ant species from your premises permanently.',
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop',
-    icon: Target,
-    href: '/services/ant-control',
-  },
-];
-
 export function FeaturedServices() {
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
-      {/* Decorative background element */}
-      <div className="absolute top-0 left-0 w-full h-[300px] bg-slate-50 z-0"></div>
+    <section className="py-24 bg-slate-50 relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/[0.02] rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/[0.03] rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3" />
 
       <div className="container mx-auto px-4 max-w-[1400px] relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
-            <h3 className="text-sm font-semibold tracking-wider text-secondary uppercase mb-2">
-              Our Expertise
-            </h3>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
-              Featured Pest Control Services
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/5 text-primary mb-4 border border-primary/10">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+              <span className="text-xs font-bold tracking-wider uppercase">Our Expertise</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-6 leading-tight">
+              Featured Pest Control <span className="text-primary">Services</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
-              We offer comprehensive pest management solutions tailored to address specific pest challenges in Kerala's climate.
+            <p className="text-slate-600 text-lg leading-relaxed">
+              We offer comprehensive, science-backed pest management solutions tailored specifically for Kerala's unique climate and challenges.
             </p>
           </div>
-          <div className="mt-6 md:mt-0">
-            <Link href="/services" className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white rounded-full px-6 py-3 text-sm font-medium transition-all">
-              <span>View All Services</span>
-              <ArrowRight className="w-4 h-4" />
+          <div className="shrink-0">
+            <Link 
+              href="/services" 
+              className="group inline-flex items-center justify-center gap-3 bg-white hover:bg-primary text-primary hover:text-white border-2 border-primary rounded-full px-8 py-4 text-sm font-bold transition-all duration-300 shadow-[0_4px_14px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_20px_rgba(10,46,82,0.15)]"
+            >
+              <span>Explore All Services</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
@@ -85,47 +52,51 @@ export function FeaturedServices() {
           }}
           className="w-full"
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-6">
             {services.map((service, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                <Card className="h-full border-0 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden bg-white flex flex-col">
-                  <div className="relative h-[220px] bg-slate-100 overflow-hidden shrink-0">
-                    <Image 
-                      src={service.image} 
-                      alt={service.title}
-                      fill
-                      className="object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700 ease-in-out"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A2E52]/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300"></div>
+              <CarouselItem key={index} className="pl-6 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                <Link href={`/services/${service.slug}`} className="block h-full outline-none">
+                  <Card className="h-full border-0 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(10,46,82,0.08)] hover:-translate-y-2 transition-all duration-500 group overflow-hidden bg-white flex flex-col relative">
                     
-                    {/* Icon Badge */}
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-2.5 rounded-2xl shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="w-6 h-6 text-accent" />
+                    {/* Image Section */}
+                    <div className="relative h-[260px] w-full overflow-hidden shrink-0 rounded-t-[2rem]">
+                      <Image 
+                        src={service.image} 
+                        alt={service.title}
+                        fill
+                        className="object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                      
+                      {/* Floating Icon Badge */}
+                      <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md p-3.5 rounded-2xl shadow-lg transform group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500 border border-white/20">
+                        <service.icon className="w-6 h-6 text-accent" />
+                      </div>
                     </div>
-                  </div>
-                  
-                  <CardContent className="p-6 relative flex-grow flex flex-col">
-                    <h3 className="text-xl font-heading font-bold text-primary mb-3 group-hover:text-accent transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-slate-600 text-[13px] leading-relaxed line-clamp-3">
-                      {service.description}
-                    </p>
-                  </CardContent>
-                  
-                  <CardFooter className="px-6 pb-6 pt-0 mt-auto">
-                    <Link href={service.href} className="inline-flex items-center justify-center gap-2 w-full rounded-full border border-slate-200 text-slate-700 hover:bg-accent hover:text-white hover:border-accent transition-all duration-300 py-2.5 text-sm font-medium">
-                      <span>Read More</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </CardFooter>
-                </Card>
+                    
+                    {/* Content Section */}
+                    <CardContent className="p-8 relative flex-grow flex flex-col bg-white">
+                      <h3 className="text-2xl font-heading font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-slate-600 text-sm leading-relaxed line-clamp-3 mb-6">
+                        {service.description}
+                      </p>
+                      
+                      <div className="mt-auto pt-4 border-t border-slate-100 flex items-center text-sm font-bold text-primary group-hover:text-accent transition-colors duration-300">
+                        Discover More 
+                        <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="flex justify-center mt-8 gap-2">
-            <CarouselPrevious className="static translate-y-0 hover:bg-secondary hover:text-white border-primary/20" />
-            <CarouselNext className="static translate-y-0 hover:bg-secondary hover:text-white border-primary/20" />
+          
+          <div className="flex justify-center mt-12 gap-4">
+            <CarouselPrevious className="static translate-y-0 w-14 h-14 rounded-full border-2 border-slate-200 text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shadow-sm" />
+            <CarouselNext className="static translate-y-0 w-14 h-14 rounded-full border-2 border-slate-200 text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shadow-sm" />
           </div>
         </Carousel>
       </div>

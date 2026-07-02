@@ -27,9 +27,7 @@ export function Navbar() {
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services', hasDropdown: true },
     { name: 'Industries We Serve', href: '/industries' },
-    { name: 'Pest Library', href: '/pest-library' },
     { name: 'Gallery', href: '/gallery', hasDropdown: true },
-    { name: 'Video Gallery', href: '/video-gallery' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact Us', href: '/contact' },
   ];
@@ -75,10 +73,10 @@ export function Navbar() {
 
           {/* CTA & Mobile Toggle */}
           <div className="flex items-center space-x-4">
-            <Button className="hidden lg:flex bg-[#4ADE80] hover:bg-[#22C55E] text-primary hover:text-white font-bold rounded-lg px-5 shadow-sm transition-all items-center">
+            <Link href="/contact" className="hidden lg:flex bg-[#4ADE80] hover:bg-[#22C55E] text-primary hover:text-white font-bold rounded-lg px-5 py-2 shadow-sm transition-all items-center">
               <CalendarDays className="w-4 h-4 mr-2" />
               Get a Free Quote
-            </Button>
+            </Link>
 
             {/* Mobile Menu Toggle */}
             <button 
@@ -106,10 +104,10 @@ export function Navbar() {
             </Link>
           ))}
           <div className="px-6 pt-4 pb-2 border-t border-slate-100 mt-2">
-            <Button className="w-full bg-secondary hover:bg-accent text-white">
+            <Link href="/contact" className="flex w-full justify-center items-center py-2.5 rounded-lg bg-secondary hover:bg-accent text-white font-medium transition-colors">
               <CalendarDays className="w-4 h-4 mr-2" />
               Get a Free Quote
-            </Button>
+            </Link>
           </div>
         </div>
       )}

@@ -22,17 +22,14 @@ export default function NotFound() {
           </p>
           
           <div className="flex flex-col space-y-3">
-            <Link href="/" className="w-full">
-              <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-full flex items-center justify-center h-12">
-                <Home className="w-4 h-4 mr-2" />
-                Return to Homepage
-              </Button>
+            <Link href="/" className="w-full bg-primary hover:bg-primary/90 text-white rounded-full flex items-center justify-center h-12 font-medium transition-colors">
+              <Home className="w-5 h-5 mr-2" />
+              Back to Homepage
             </Link>
             
-            <Link href="/contact" className="w-full">
-              <Button variant="outline" className="w-full rounded-full flex items-center justify-center h-12 border-slate-200 hover:bg-slate-50 text-slate-700">
-                Contact Support
-              </Button>
+            <Link href="/contact" className="w-full rounded-full flex items-center justify-center h-12 border-2 border-slate-200 hover:bg-slate-50 text-slate-700 font-medium transition-colors">
+              <Search className="w-5 h-5 mr-2" />
+              Contact Support
             </Link>
           </div>
         </div>

@@ -47,7 +47,7 @@ export function Footer() {
                 { name: 'Home', href: '/' },
                 { name: 'About Us', href: '/about' },
                 { name: 'Industries We Serve', href: '/industries' },
-                { name: 'Pest Library', href: '/pest-library' },
+
                 { name: 'Blog', href: '/blog' },
                 { name: 'Contact Us', href: '/contact' },
               ].map((link) => (
