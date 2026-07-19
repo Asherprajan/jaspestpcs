@@ -33,7 +33,7 @@ export default function ServicesPage() {
               </div>
               <div className="p-8 flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-primary mb-3">{service.title}</h3>
-                <p className="text-muted-foreground mb-6 flex-grow">{service.description}</p>
+                <p className="text-muted-foreground mb-6 flex-grow text-justify">{service.description}</p>
                 <Link 
                   href={`/services/${service.slug}`}
                   className="inline-flex items-center text-primary font-semibold hover:text-primary/80 transition-colors"

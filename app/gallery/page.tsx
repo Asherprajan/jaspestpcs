@@ -2,49 +2,49 @@ import Image from 'next/image';
 
 const photos = [
   {
-    src: 'https://images.unsplash.com/photo-1584824486516-0555a07fc511?q=80&w=800&auto=format&fit=crop',
-    title: 'Commercial Fumigation',
-    category: 'Commercial'
+    src: '/images/anti-termite-pre-construction.jpeg',
+    title: 'Pre-construction Anti-Termite Treatment',
+    category: 'Treatment'
   },
   {
-    src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop',
-    title: 'Lab Testing',
-    category: 'Equipment'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1586528116311-ad8ed7c4263b?q=80&w=800&auto=format&fit=crop',
-    title: 'Warehouse Inspection',
-    category: 'Commercial'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop',
-    title: 'Residential Treatment',
-    category: 'Residential'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=800&auto=format&fit=crop',
-    title: 'Termite Damage Assessment',
+    src: '/images/water-food.jpeg',
+    title: 'Food Safety & Hygiene Inspection',
     category: 'Inspection'
   },
   {
-    src: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop',
-    title: 'Kitchen Sanitization',
+    src: '/images/water-food-1.jpeg',
+    title: 'Water Tank Sanitization Service',
+    category: 'Treatment'
+  },
+  {
+    src: '/images/water-food-2.jpeg',
+    title: 'Commercial Kitchen Pest Control',
+    category: 'Commercial'
+  },
+  {
+    src: '/images/water-food-3.jpeg',
+    title: 'Water & Food Quality Testing',
+    category: 'Inspection'
+  },
+  {
+    src: '/images/home1.jpeg',
+    title: 'Living Room Sanitization',
     category: 'Residential'
   },
   {
-    src: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=800&auto=format&fit=crop',
-    title: 'Restaurant Audit',
-    category: 'Commercial'
+    src: '/images/home2.jpeg',
+    title: 'Bed Bug Thermal Heat Treatment',
+    category: 'Treatment'
   },
   {
-    src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop',
-    title: 'Hotel Bed Bug Check',
-    category: 'Commercial'
+    src: '/images/home3.jpeg',
+    title: 'Residential Cockroach Control',
+    category: 'Residential'
   },
   {
-    src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop',
-    title: 'Hospital Sterilization',
-    category: 'Healthcare'
+    src: '/images/home4.jpeg',
+    title: 'Home Termite Barrier Setup',
+    category: 'Treatment'
   }
 ];
 

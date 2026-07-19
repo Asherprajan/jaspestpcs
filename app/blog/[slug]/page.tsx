@@ -77,6 +77,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           }
           .blog-content p {
             margin-bottom: 1.5rem;
+            text-align: justify;
           }
           .blog-content ul {
             list-style-type: disc;

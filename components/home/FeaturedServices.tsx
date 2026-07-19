@@ -79,7 +79,7 @@ export function FeaturedServices() {
                       <h3 className="text-2xl font-heading font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors duration-300">
                         {service.title}
                       </h3>
-                      <p className="text-slate-600 text-sm leading-relaxed line-clamp-3 mb-6">
+                      <p className="text-slate-600 text-sm leading-relaxed line-clamp-3 mb-6 text-justify">
                         {service.description}
                       </p>
                       

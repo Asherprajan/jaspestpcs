@@ -46,9 +46,9 @@ export function Navbar() {
             <Image 
               src="/logo.svg" 
               alt="JAS Pest Control Service Logo" 
-              width={250} 
-              height={70} 
-              className="h-12 md:h-16 w-auto object-contain"
+              width={350} 
+              height={100} 
+              className="h-16 md:h-24 w-auto object-contain"
               priority
             />
           </Link>

@@ -65,7 +65,7 @@ export function LatestBlogs() {
                   </Link>
                 </h3>
                 
-                <p className="text-muted-foreground text-sm line-clamp-3 mb-6 flex-1">
+                <p className="text-muted-foreground text-sm line-clamp-3 mb-6 flex-1 text-justify">
                   {blog.excerpt}
                 </p>
                 

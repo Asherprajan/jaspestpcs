@@ -2,7 +2,7 @@ import { services } from '@/lib/services';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Phone } from 'lucide-react';
 
 export function generateStaticParams() {
   return services.map((service) => ({
@@ -49,7 +49,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
           <div className="lg:col-span-2 space-y-12">
             <section>
               <h2 className="text-3xl font-heading font-bold text-primary mb-6">Overview</h2>
-              <p className="text-lg text-slate-700 leading-relaxed">
+              <p className="text-lg text-slate-700 leading-relaxed text-justify">
                 {service.detailedContent}
               </p>
             </section>
@@ -76,7 +76,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
-                      <p className="text-slate-600">{step.description}</p>
+                      <p className="text-slate-600 text-justify">{step.description}</p>
                     </div>
                   </div>
                 ))}
@@ -86,22 +86,27 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
 
           {/* Sidebar CTA */}
           <div className="lg:col-span-1">
-            <div className="sticky top-24 bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm">
-              <h3 className="text-2xl font-bold text-primary mb-4">Need {service.title}?</h3>
-              <p className="text-slate-600 mb-6">
-                Don't let pests take over your property. Contact our experts today for a free inspection and quote.
+            <div className="sticky top-24 bg-gradient-to-br from-[#0A2E52] to-[#124270] text-white rounded-3xl p-8 shadow-xl border border-white/10 overflow-hidden relative group">
+              {/* Decorative background glass element */}
+              <div className="absolute -right-16 -top-16 w-36 h-36 bg-accent/20 rounded-full blur-2xl group-hover:bg-accent/30 transition-all duration-700"></div>
+              
+              <h3 className="text-2xl font-bold text-white mb-4 relative z-10">Need {service.title}?</h3>
+              <p className="text-slate-200 mb-6 text-justify leading-relaxed relative z-10">
+                Don't let pests take over your property. Contact our experts today for a free consultation and quote.
               </p>
+              
               <Link 
                 href="/contact"
-                className="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white py-4 rounded-xl font-bold transition-all"
+                className="w-full flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-white py-4 rounded-2xl font-bold shadow-[0_0_20px_rgba(74,222,128,0.25)] hover:shadow-[0_0_25px_rgba(74,222,128,0.45)] transition-all duration-300 relative z-10"
               >
-                Book an Inspection <ArrowRight className="w-5 h-5" />
+                Book a Free Consultation <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               
-              <div className="mt-6 pt-6 border-t border-slate-200">
-                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">Or call us directly</p>
-                <a href="tel:+919876543210" className="text-xl font-bold text-slate-900 hover:text-primary transition-colors">
-                  +91 98765 43210
+              <div className="mt-8 pt-6 border-t border-white/10 relative z-10">
+                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Or call us directly</p>
+                <a href="tel:+917012740820" className="text-2xl font-black text-accent hover:text-white transition-colors duration-300 flex items-center gap-2">
+                  <Phone className="w-5 h-5" />
+                  +91 7012740820
                 </a>
               </div>
             </div>

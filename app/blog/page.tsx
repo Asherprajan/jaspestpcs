@@ -37,7 +37,7 @@ export default function BlogPage() {
                     {blog.title}
                   </h3>
                 </Link>
-                <p className="text-slate-600 mb-6 flex-grow line-clamp-3">{blog.excerpt}</p>
+                <p className="text-slate-600 mb-6 flex-grow line-clamp-3 text-justify">{blog.excerpt}</p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="flex items-center gap-2 text-sm font-medium text-slate-700">
                     <User className="w-4 h-4 text-primary" /> {blog.author}

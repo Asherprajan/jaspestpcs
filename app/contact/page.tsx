@@ -4,7 +4,7 @@ import { ContactForm } from '@/components/contact/ContactForm';
 
 export const metadata = {
   title: 'Contact Us | JAS Pest Control Service',
-  description: 'Get in touch with JAS Pest Control Service for a free inspection or to book our services. Serving all districts of Kerala.',
+  description: 'Get in touch with JAS Pest Control Service for a free consultation or to book our services. Serving all districts of Kerala.',
 };
 
 export default function ContactPage() {
@@ -47,7 +47,12 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-xl font-heading font-bold text-primary mb-1">Our Location</h4>
-                    <p className="text-muted-foreground">Iritty, Kannur, Kerala<br />Service coverage across all districts.</p>
+                    <p className="text-muted-foreground text-justify">
+                      Door No.: 9/2333, 1st Floor<br />
+                      Bus Stand One Way Road<br />
+                      Iritty – 670703<br />
+                      Service coverage across all districts.
+                    </p>
                   </div>
                 </div>
                 
@@ -58,7 +63,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="text-xl font-heading font-bold text-primary mb-1">Phone Number</h4>
                     <p className="text-muted-foreground">
-                      <a href="tel:7012740820" className="hover:text-secondary transition-colors">7012740820</a>
+                      <a href="tel:+917012740820" className="hover:text-secondary transition-colors">+91 7012740820</a>
                     </p>
                   </div>
                 </div>
@@ -97,11 +102,16 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Google Maps Placeholder */}
-      <section className="h-[400px] w-full bg-slate-200 relative">
-        <div className="absolute inset-0 flex items-center justify-center text-slate-500 font-medium">
-          [Google Map Placeholder for Iritty, Kannur]
-        </div>
+      {/* Google Maps Embed */}
+      <section className="h-[450px] w-full relative border-t border-slate-100 bg-slate-50">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5042.668054231153!2d75.74145067606733!3d11.90500528832084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5cd6c1df1fba9%3A0xd7e11dec34385f3c!2sJAS%20PEST%20CONTROL%20SERVICE!5e1!3m2!1sen!2sin!4v1784497998662!5m2!1sen!2sin" 
+          className="w-full h-full"
+          style={{ border: 0 }} 
+          allowFullScreen={true}
+          loading="lazy" 
+          referrerPolicy="strict-origin-when-cross-origin"
+        ></iframe>
       </section>
     </>
   );

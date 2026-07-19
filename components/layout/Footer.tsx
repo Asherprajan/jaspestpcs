@@ -92,11 +92,15 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" />
-                <span>Iritty, Kannur, Kerala<br />Serving all districts of Kerala</span>
+                <span>
+                  Door No.: 9/2333, 1st Floor<br />
+                  Bus Stand One Way Road<br />
+                  Iritty – 670703
+                </span>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 text-accent mr-3 flex-shrink-0" />
-                <a href="tel:7012740820" className="hover:text-white transition-colors">7012740820</a>
+                <a href="tel:+917012740820" className="hover:text-white transition-colors">+91 7012740820</a>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 text-accent mr-3 flex-shrink-0" />
