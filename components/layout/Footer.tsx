@@ -118,7 +118,18 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10 py-6">
         <div className="container mx-auto px-4 max-w-[1400px] flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>&copy; {new Date().getFullYear()} JAS Pest Control Service. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} JAS Pest Control Service. All rights reserved.{' '}
+            <span className="text-slate-500">|</span> Developed by{' '}
+            <a 
+              href="https://www.digitalmitra.co/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-accent hover:text-white transition-colors font-medium"
+            >
+              Digital Mitra
+            </a>
+          </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
