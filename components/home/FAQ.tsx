@@ -13,8 +13,8 @@ export function FAQ() {
       answer: 'For most of our treatments, like gel baiting for cockroaches, you do not need to leave the house. For spray treatments or intensive procedures like bed bug eradication, we may advise you to vacate the premises for 2-4 hours for safety.',
     },
     {
-      question: 'Is your pest control service guaranteed?',
-      answer: 'Yes, we provide a service guarantee and warranty for specific treatments like termite control. If pests return during the warranty period, we will re-treat the affected area at no additional cost.',
+      question: 'Are your technicians trained and certified?',
+      answer: 'Yes, all our technicians undergo rigorous training and are fully certified in modern pest management techniques, chemical handling, and safety protocols to ensure the highest quality of service.',
     },
     {
       question: 'Do you provide services in all districts of Kerala?',

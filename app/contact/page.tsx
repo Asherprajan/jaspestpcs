@@ -47,12 +47,12 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-xl font-heading font-bold text-primary mb-1">Our Location</h4>
-                    <p className="text-muted-foreground text-justify">
+                    <a href="https://maps.app.goo.gl/F2j7hEGzZx1D9Szd9" target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-justify hover:text-secondary transition-colors block">
                       Door No.: 9/2333, 1st Floor<br />
                       Bus Stand One Way Road<br />
                       Iritty – 670703<br />
                       Service coverage across all districts.
-                    </p>
+                    </a>
                   </div>
                 </div>
                 
@@ -105,7 +105,7 @@ export default function ContactPage() {
       {/* Google Maps Embed */}
       <section className="h-[450px] w-full relative border-t border-slate-100 bg-slate-50">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5042.668054231153!2d75.74145067606733!3d11.90500528832084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5cd6c1df1fba9%3A0xd7e11dec34385f3c!2sJAS%20PEST%20CONTROL%20SERVICE!5e1!3m2!1sen!2sin!4v1784497998662!5m2!1sen!2sin" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.7766398478616!2d75.6774734!3d11.9899515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4358370127e3d%3A0x2dd8346694ae7c3f!2sJAS%20PEST%20CONTROL%20SERVICES!5e0!3m2!1sen!2sin!4v1786516050094!5m2!1sen!2sin" 
           className="w-full h-full"
           style={{ border: 0 }} 
           allowFullScreen={true}

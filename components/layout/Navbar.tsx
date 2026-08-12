@@ -34,8 +34,10 @@ export function Navbar() {
 
   return (
     <header 
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-3' : 'bg-white py-4'
+      className={`sticky top-0 z-50 w-full transition-all duration-300 border-b ${
+        isScrolled 
+          ? 'bg-white/80 backdrop-blur-md border-slate-200/40 shadow-sm py-2' 
+          : 'bg-white/90 backdrop-blur-md border-transparent py-3'
       }`}
     >
       <div className="container mx-auto px-4 max-w-[1400px]">
@@ -44,7 +46,7 @@ export function Navbar() {
           {/* Logo Area */}
           <Link href="/" className="flex items-center group shrink-0">
             <Image 
-              src="/logo.svg" 
+              src="/logo_transparent.png" 
               alt="JAS Pest Control Service Logo" 
               width={350} 
               height={100} 
@@ -91,7 +93,7 @@ export function Navbar() {
 
       {/* Mobile Navigation Dropdown */}
       {isMobileMenuOpen && (
-        <div className="xl:hidden absolute top-full left-0 w-full bg-white border-t border-slate-100 shadow-xl py-4 flex flex-col">
+        <div className="xl:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-t border-slate-100 shadow-xl py-4 flex flex-col">
           {navLinks.map((link) => (
             <Link 
               key={link.name} 

@@ -11,7 +11,7 @@ export function Footer() {
           <div className="space-y-6">
             <Link href="/" className="inline-block bg-white p-2 rounded-lg">
               <Image 
-                src="/logo.svg" 
+                src="/logo_transparent.png" 
                 alt="JAS Pest Control Service Logo" 
                 width={200} 
                 height={60} 
@@ -22,16 +22,16 @@ export function Footer() {
               Kerala's trusted pest control experts providing comprehensive and professional pest management solutions for homes, businesses, and industries across all districts.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-white/10 px-3 py-2 rounded-full hover:bg-accent hover:text-white transition-colors text-xs font-bold">
+              <a href="https://www.facebook.com/share/1BHGwKUzWL/" target="_blank" rel="noopener noreferrer" className="bg-white/10 px-3 py-2 rounded-full hover:bg-accent hover:text-white transition-colors text-xs font-bold">
                 FB
               </a>
-              <a href="#" className="bg-white/10 px-3 py-2 rounded-full hover:bg-accent hover:text-white transition-colors text-xs font-bold">
+              <a href="https://www.instagram.com/jaspestcontrolservice" target="_blank" rel="noopener noreferrer" className="bg-white/10 px-3 py-2 rounded-full hover:bg-accent hover:text-white transition-colors text-xs font-bold">
                 IG
               </a>
-              <a href="#" className="bg-white/10 px-3 py-2 rounded-full hover:bg-accent hover:text-white transition-colors text-xs font-bold">
+              <a href="https://www.linkedin.com/in/jayesh-joseph-936b7a318" target="_blank" rel="noopener noreferrer" className="bg-white/10 px-3 py-2 rounded-full hover:bg-accent hover:text-white transition-colors text-xs font-bold">
                 IN
               </a>
-              <a href="#" className="bg-white/10 px-3 py-2 rounded-full hover:bg-accent hover:text-white transition-colors text-xs font-bold">
+              <a href="https://youtube.com/@jayeshjoseph7956" target="_blank" rel="noopener noreferrer" className="bg-white/10 px-3 py-2 rounded-full hover:bg-accent hover:text-white transition-colors text-xs font-bold">
                 YT
               </a>
             </div>
@@ -92,11 +92,11 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" />
-                <span>
+                <a href="https://maps.app.goo.gl/F2j7hEGzZx1D9Szd9" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   Door No.: 9/2333, 1st Floor<br />
                   Bus Stand One Way Road<br />
                   Iritty – 670703
-                </span>
+                </a>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 text-accent mr-3 flex-shrink-0" />

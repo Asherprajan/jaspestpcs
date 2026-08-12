@@ -144,10 +144,10 @@ export default function AboutPage() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { name: 'Envu', logo: '/images/about/envu.png', description: 'Environmental Science' },
-                { name: 'Syngenta', logo: '/images/about/syngenta.png', description: 'Crop Protection & Control' },
-                { name: 'UPL OpenAg', logo: '/images/about/upl.png', description: 'Agricultural Solutions' },
-                { name: 'Sumitomo Chemical', logo: '/images/about/sumitomo.png', description: 'Pest Control Products' }
+                { name: 'Envu', logo: '/logos/envu.svg', description: 'Environmental Science' },
+                { name: 'Syngenta', logo: '/logos/syngenta.svg', description: 'Crop Protection & Control' },
+                { name: 'UPL OpenAg', logo: '/logos/upl.png', description: 'Agricultural Solutions' },
+                { name: 'Sumitomo Chemical', logo: '/logos/sumitomo.jpeg', description: 'Pest Control Products' }
               ].map((company) => (
                 <div key={company.name} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300 flex flex-col items-center justify-center text-center group">
                   <div className="relative w-full h-16 mb-6 flex items-center justify-center">
@@ -181,8 +181,8 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {[
-                { name: 'JCI India', logo: '/images/about/jci.png', description: 'Junior Chamber International India', detail: 'An active leadership and business networking organization helping local businesses scale through training, community involvement, and global connections.' },
-                { name: 'JCOM (#LETUSCONNECT4BUSINESS)', logo: '/images/about/jcom.png', description: 'Premium Business Networking Platform', detail: 'A premium corporate commerce and business group focusing on fostering strong partnerships, reliable B2B referrals, and promoting local economic growth.' }
+                { name: 'JCI India', logo: '/logos/jci.png', description: 'Junior Chamber International India', detail: 'An active leadership and business networking organization helping local businesses scale through training, community involvement, and global connections.' },
+                { name: 'JCOM (#LETUSCONNECT4BUSINESS)', logo: '/logos/jcom.png', description: 'Premium Business Networking Platform', detail: 'A premium corporate commerce and business group focusing on fostering strong partnerships, reliable B2B referrals, and promoting local economic growth.' }
               ].map((affiliation) => (
                 <div key={affiliation.name} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300 flex flex-col group">
                   <div className="relative w-36 h-20 mb-6 bg-slate-50 rounded-2xl p-2 border border-slate-100/50 flex items-center justify-center mx-auto sm:mx-0">
