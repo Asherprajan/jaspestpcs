@@ -8,10 +8,64 @@ import { CustomerTestimonials } from '@/components/home/CustomerTestimonials';
 import { FAQ } from '@/components/home/FAQ';
 import { LatestBlogs } from '@/components/home/LatestBlogs';
 import { FinalCTA } from '@/components/home/FinalCTA';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+export const metadata: Metadata = {
+  title: 'JAS Pest Control Service | Professional Pest Management Solutions in Kerala',
+  description: 'Top-rated pest control services in Kerala. Specializing in termite, cockroach, rodent, and mosquito control for residential and commercial properties. ISO 9001:2015 certified.',
+  alternates: {
+    canonical: 'https://jaspestpcs.com',
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'JAS Pest Control Service',
+  image: 'https://jaspestpcs.com/images/og-image.jpg',
+  '@id': 'https://jaspestpcs.com',
+  url: 'https://jaspestpcs.com',
+  telephone: '+917012740820',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Kerala',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 10.8505, // Approximate center of Kerala
+    longitude: 76.2711,
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday'
+    ],
+    opens: '00:00',
+    closes: '23:59',
+  },
+  sameAs: [
+    'https://www.facebook.com/jaspestpcs/',
+    'https://www.instagram.com/jaspestpcs/',
+    'https://twitter.com/jaspestpcs',
+  ]
+};
 
 export default function Home() {
   return (
     <>
+      <Script
+        id="json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <HeroSection />
       
       {/* Sections below hero: Why Choose Us & Industries */}

@@ -4,10 +4,47 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, User, ArrowLeft } from 'lucide-react';
 
+import { Metadata } from 'next';
+
 export function generateStaticParams() {
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const blog = blogs.find((b) => b.slug === resolvedParams.slug);
+
+  if (!blog) {
+    return {
+      title: 'Blog Post Not Found',
+    };
+  }
+
+  return {
+    title: blog.title,
+    description: blog.excerpt,
+    alternates: {
+      canonical: `https://jaspestpcs.com/blog/${blog.slug}`,
+    },
+    openGraph: {
+      title: blog.title,
+      description: blog.excerpt,
+      url: `https://jaspestpcs.com/blog/${blog.slug}`,
+      type: 'article',
+      publishedTime: new Date(blog.date).toISOString(),
+      authors: [blog.author],
+      images: [
+        {
+          url: blog.image,
+          width: 1200,
+          height: 630,
+          alt: blog.title,
+        },
+      ],
+    },
+  };
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {

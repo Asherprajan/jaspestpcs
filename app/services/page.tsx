@@ -1,7 +1,16 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { services } from '@/lib/services';
 import { ArrowRight } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Pest Control Services',
+  description: 'Comprehensive, safe, and effective pest management solutions for residential and commercial properties across Kerala.',
+  alternates: {
+    canonical: 'https://jaspestpcs.com/services',
+  },
+};
 
 export default function ServicesPage() {
   return (

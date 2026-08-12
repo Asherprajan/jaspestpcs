@@ -5,8 +5,11 @@ import Image from 'next/image';
 import { FinalCTA } from '@/components/home/FinalCTA';
 
 export const metadata = {
-  title: 'About Us | JAS Pest Control Service',
+  title: 'About Us',
   description: 'Learn about JAS Pest Control Service, our mission, vision, and why we are Kerala\'s most trusted pest management company.',
+  alternates: {
+    canonical: 'https://jaspestpcs.com/about',
+  },
 };
 
 export default function AboutPage() {

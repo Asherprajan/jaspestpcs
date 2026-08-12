@@ -3,8 +3,11 @@ import Link from 'next/link';
 import { ContactForm } from '@/components/contact/ContactForm';
 
 export const metadata = {
-  title: 'Contact Us | JAS Pest Control Service',
+  title: 'Contact Us',
   description: 'Get in touch with JAS Pest Control Service for a free consultation or to book our services. Serving all districts of Kerala.',
+  alternates: {
+    canonical: 'https://jaspestpcs.com/contact',
+  },
 };
 
 export default function ContactPage() {

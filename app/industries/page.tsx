@@ -1,6 +1,15 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Building2, Home, Utensils, Hospital, Warehouse, Hotel, ArrowRight, CheckCircle2 } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Industries We Serve',
+  description: 'Customized pest control solutions for residential properties, restaurants, offices, hotels, hospitals, and warehouses in Kerala.',
+  alternates: {
+    canonical: 'https://jaspestpcs.com/industries',
+  },
+};
 
 const industries = [
   {

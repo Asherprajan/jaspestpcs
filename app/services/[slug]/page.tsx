@@ -4,10 +4,44 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle2, ArrowRight, Phone } from 'lucide-react';
 
+import { Metadata } from 'next';
+
 export function generateStaticParams() {
   return services.map((service) => ({
     slug: service.slug,
   }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const service = services.find((s) => s.slug === resolvedParams.slug);
+
+  if (!service) {
+    return {
+      title: 'Service Not Found',
+    };
+  }
+
+  return {
+    title: service.title,
+    description: service.description,
+    alternates: {
+      canonical: `https://jaspestpcs.com/services/${service.slug}`,
+    },
+    openGraph: {
+      title: `${service.title} | JAS Pest Control Service`,
+      description: service.description,
+      url: `https://jaspestpcs.com/services/${service.slug}`,
+      images: [
+        {
+          url: service.image,
+          width: 800,
+          height: 600,
+          alt: service.title,
+        },
+      ],
+    },
+  };
 }
 
 export default async function ServiceDetail({ params }: { params: Promise<{ slug: string }> }) {

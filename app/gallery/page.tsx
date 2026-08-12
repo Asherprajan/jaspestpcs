@@ -1,4 +1,13 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Gallery',
+  description: 'Explore our professional pest control team in action. From detailed residential inspections to large-scale commercial fumigation.',
+  alternates: {
+    canonical: 'https://jaspestpcs.com/gallery',
+  },
+};
 
 const photos = [
   {

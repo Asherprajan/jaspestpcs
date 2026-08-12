@@ -1,7 +1,16 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { blogs } from '@/lib/blogs';
 import { Calendar, User, ArrowRight } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Blog',
+  description: 'Tips, guides, and expert advice on keeping your property pest-free from the professionals at Jas Pest Control.',
+  alternates: {
+    canonical: 'https://jaspestpcs.com/blog',
+  },
+};
 
 export default function BlogPage() {
   return (
