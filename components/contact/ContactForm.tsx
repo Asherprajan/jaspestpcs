@@ -86,10 +86,7 @@ export function ContactForm() {
           <Label htmlFor="phone">Phone Number <span className="text-red-500">*</span></Label>
           <Input id="phone" name="phone" required placeholder="+91 9876543210" className="bg-slate-50 border-slate-200 focus-visible:ring-accent" />
         </div>
-        <div className="space-y-2">
-          <Label htmlFor="service">Service Required</Label>
-          <Input id="service" name="service" placeholder="e.g. Termite Control, General Pest Control" className="bg-slate-50 border-slate-200 focus-visible:ring-accent" />
-        </div>
+
         <div className="space-y-2">
           <Label htmlFor="message">Message <span className="text-red-500">*</span></Label>
           <Textarea 
