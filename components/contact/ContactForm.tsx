@@ -26,11 +26,18 @@ export function ContactForm() {
       return;
     }
 
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      message: formData.get('message'),
+    };
+
     try {
-      // Send directly to Google Apps Script Web App
+      // Send JSON string. Fetch defaults to text/plain which avoids CORS preflight issues with Google Apps Script
       const response = await fetch(scriptURL, {
         method: 'POST',
-        body: formData,
+        body: JSON.stringify(data),
       });
 
       // Google Apps Script usually returns a 200 OK with the JSON output
