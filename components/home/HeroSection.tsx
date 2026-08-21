@@ -8,8 +8,6 @@ import Link from 'next/link';
 export function HeroSection() {
   const stats = [
     { value: '21+', label: 'Years\nExperience', icon: Award },
-    { value: '5000+', label: 'Happy\nCustomers', icon: Users },
-    { value: '15000+', label: 'Projects\nCompleted', icon: Briefcase },
     { value: '100%', label: 'Safe & Effective\nTreatments', icon: ShieldCheck },
   ];
 

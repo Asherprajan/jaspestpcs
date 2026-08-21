@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 
 export function TrustStatistics() {
   const stats = [
-    { value: '5000+', label: 'Happy Customers' },
-    { value: '15000+', label: 'Projects Completed' },
     { value: '21+', label: 'Years Experience' },
     { value: '100%', label: 'Customer Satisfaction' },
     { value: '24/7', label: 'Support Available' },
